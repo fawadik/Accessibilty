@@ -1,0 +1,260 @@
+body {
+    margin: 0 2%;
+    font-family: "montserrat";
+    font: "montserrat-bold";
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 2% 0 2%;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button:hover {
+    background-color: darkgray;
+    cursor: pointer;
+}
+
+.navbar {
+     
+    padding: 2% 0 2% 0;
+    font-weight: bold;
+    font-size: 1.5em;
+
+    &__logo {
+        width: 40%;
+    }
+
+    &__top-navigation {
+        margin: 0;
+        width: 60%;
+        float: right;
+        text-align: right;
+    li:hover {
+        background-color: rgb(175, 164, 164);
+    }
+    }
+}
+
+.main-header {
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+}
+
+.svg-image {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+}
+
+#world {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+    transform-box: fill-box;
+    
+}
+
+@keyframes spin {
+   from {
+       transform: rotate3d(0deg);
+   }
+   to {
+       transform: rotate3d(360deg);
+   }
+}
+
+.intro {
+    text-align: center;
+    margin-top: 0%;
+    display: block;
+
+    &__intro-text {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        width: 45%;
+        float: left;
+        text-align: justify;
+        margin-left: 5%;
+        line-height: 2.5;  
+        display: block;
+    }
+
+    &__hero-image {
+        width: 35%;
+    }
+}
+
+#arrowDown {
+    text-align: center;
+    display: block;
+    margin: 2em;
+}
+
+.tech {
+    display: block;
+    text-align: center;
+    padding: 1.5em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+
+    &__card {
+        width: 20%;
+        text-align: center;
+        padding: 1.5em;
+        border: 2px grey solid;
+    }
+
+    &__tech-buttons {
+        padding: 15px 50px;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+.techStack {
+    display: flex;
+    flex-direction:row;   
+    justify-content: space-evenly; 
+}
+
+
+.project {
+    display: flex;
+    flex-direction: row;
+    padding: 5rem;
+    border: 2px solid grey; 
+    margin-top: 1rem;
+    
+    &__project-images {
+        max-width: 400px; 
+    }
+    p {
+        text-align: justify;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 30%;
+    
+    input {
+        height: 2rem;
+    }
+
+    &__label {
+        margin-top: 1rem;
+    }
+
+    &__submit-btn {
+        height: 2rem;
+        margin: 1rem 0; 
+    }
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-evenly;
+}
+.social-media i {
+    padding-right: 5rem;
+}
+.fa-facebook-f{
+    color: #3E00FF;
+}
+
+.fa-instagram {
+    color: #FF6B6B;    
+}
+
+.fa-twitter {
+    color: #3DB2FF;
+}
+
+.fa-envelope {
+    color: #64C9CF;
+}
+
+@media (max-width: 1200px) {
+    .navbar__logo {
+        width: 20%;
+      }
+    
+      .intro__intro-text {
+        width: 100%;
+        margin-left: 0%;
+      }
+    
+      .intro_hero-image {
+        width: 100%;
+      }
+    
+      .project {
+        flex-direction: column;
+      }
+    
+      .project__project-images {
+        width: 100%;
+      }
+    }
+
+  @media (max-width: 750px) {
+    .navbar__logo {
+        width: 100%;
+        text-align: center;
+        margin-left: 45%;
+    }
+    .navbar__top-navigation {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .row__card {
+        width: 90%;        
+    }
+    .techStack {
+        flex-direction: column;
+        text-align: center;        
+    }
+    .project {
+        flex-direction: column;
+    }
+    .project__project-images {
+        width: 100%;
+    }
+    #footer {
+        flex-direction: column;
+    }
+    #footer p {
+        text-align: center;
+    }
+    .social-media i {
+        padding: 0%;        
+  }
+}
